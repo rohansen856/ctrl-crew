@@ -1,3 +1,4 @@
+import { Achievements } from "@/components/achievements"
 import { Hero } from "@/components/hero"
 import { FloatingNav } from "@/components/shared/floating-nav"
 import { Members } from "@/components/team-members"
@@ -9,8 +10,11 @@ export default async function Page() {
         <Hero />
       </section>
       <FloatingNav navItems={[]} />
-      <section className="h-[400vh] w-full py-12" id="members">
+      <section className="h-auto w-full py-12" id="members">
         <Members />
+      </section>
+      <section className="h-auto w-full py-12" id="achievements">
+        <Achievements />
       </section>
     </main>
   )

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { members } from "@/config/team"
 import { cn } from "@/lib/utils"
 
+import { AnimatedTooltip } from "./avatar-stack"
 import { Icons } from "./icons"
 import { FileTreeDemo } from "./member-tree"
 import { MarqueeDemo } from "./slider-comments"
@@ -21,12 +22,22 @@ const badgeColors = [
 export async function Members() {
   return (
     <div className="mt-8 px-6">
-      <h2 className="mb-16 text-center font-heading text-xl lg:text-3xl 2xl:text-5xl">
+      <h2 className="mb-8 text-center font-heading text-xl lg:text-3xl 2xl:text-5xl">
         Team Members
       </h2>
+      <div className="mb-8 flex justify-center">
+        <AnimatedTooltip
+          items={members.map((member, i) => ({
+            image: `/images/avatars/${member.name || "rohan"}.jpg`,
+            id: i + 1,
+            designation: "",
+            name: member.fullName,
+          }))}
+        />
+      </div>
       <div className="mb-12 flex flex-col justify-center gap-6 lg:flex-row lg:gap-12">
         <FileTreeDemo />
-        <div className="flex flex-col justify-center gap-4 font-heading text-xl lg:border-l-4 lg:pl-8 lg:text-3xl 2xl:text-5xl">
+        <div className="flex flex-col justify-center gap-4 border-l-4 pl-8 font-heading text-xl lg:text-3xl 2xl:text-5xl">
           <h4>
             Team Members:{" "}
             <span className="bg-gradient-to-br from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-clip-text text-transparent">
@@ -52,7 +63,7 @@ export async function Members() {
           key={member.name}
           id={member.name.toLowerCase()}
           className={cn(
-            "mb-12 flex h-[90vh] w-full flex-col gap-8",
+            "mb-12 flex w-full flex-col gap-8 pt-4 lg:h-[90vh]",
             i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           )}
         >
@@ -62,7 +73,7 @@ export async function Members() {
               i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             )}
           >
-            <h3 className="text-vertical text-start font-heading text-3xl capitalize text-transparent lg:text-5xl 2xl:text-7xl">
+            <h3 className="text-vertical h-[35vh] text-start font-heading text-3xl uppercase text-transparent lg:text-5xl 2xl:text-7xl">
               {member.name}
             </h3>
             <div className="relative max-w-xl flex-1 overflow-hidden rounded-3xl rounded-bl-[30%] rounded-tr-[30%] border-x-4 border-teal-700">

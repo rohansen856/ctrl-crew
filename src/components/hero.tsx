@@ -8,6 +8,7 @@ import { members } from "@/config/team"
 import { cn } from "@/lib/utils"
 import RetroGrid from "@/components/magicui/retro-grid"
 
+import { AnimatedBeamDemo } from "./animated-members"
 import { AnimatedTooltip } from "./avatar-stack"
 import AnimatedGradientText from "./magicui/animated-gradient-text"
 import { TypeWriter } from "./type-writer"
@@ -31,21 +32,14 @@ export function Hero() {
           <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedGradientText>
       </Link>
-      <h1 className="pointer-events-none z-10 mb-8 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
+      <h1 className="pointer-events-none z-10 mb-2 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
         We are CTRL-CREW
       </h1>
-      <h2 className="z-10 flex h-32 gap-1 text-2xl font-bold lg:text-4xl 2xl:text-5xl">
+      <h2 className="z-10 flex h-20 gap-1 text-2xl font-bold lg:text-4xl 2xl:text-5xl">
         <TypeWriter />{" "}
       </h2>
-      <div className="flex justify-center">
-        <AnimatedTooltip
-          items={members.map((member, i) => ({
-            image: `/images/avatars/${member.name || "rohan"}.jpg`,
-            id: i + 1,
-            designation: "",
-            name: member.fullName,
-          }))}
-        />
+      <div className="flex w-full flex-col">
+        <AnimatedBeamDemo />
       </div>
       <RetroGrid />
     </div>

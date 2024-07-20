@@ -43,4 +43,32 @@ export const members = [
     ],
     portfolio: "/",
   },
+  {
+    id: "aryan",
+    name: "Aryan",
+    fullName: "Aryan Pandit",
+    mainSkill: "cybersec",
+    domains: [
+      "web dev",
+      "frontend developer",
+      "backend engineer",
+      "blockchain dev",
+      "rust enthusiast",
+    ],
+    portfolio: "/",
+  },
+  {
+    id: "tanmay",
+    name: "Tanmay",
+    fullName: "Tanmay Deobhankar",
+    mainSkill: "frontend dev",
+    domains: [
+      "web dev",
+      "frontend developer",
+      "backend engineer",
+      "blockchain dev",
+      "rust enthusiast",
+    ],
+    portfolio: "/",
+  },
 ]
