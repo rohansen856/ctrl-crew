@@ -153,7 +153,7 @@ export function AnimatedNavbar() {
                 >
                   <Avatar className="size-8 border-2 border-green-800">
                     <AvatarImage
-                      src={`/images/avatars/${member.name}.jpg`}
+                      src={`/images/avatars/${member.name.toLowerCase() || "rohan"}.jpg`}
                       alt={member.name}
                       className="object-cover"
                     />

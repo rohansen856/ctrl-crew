@@ -30,7 +30,7 @@ export async function Members() {
       <div className="mb-8 flex justify-center">
         <AnimatedTooltip
           items={members.map((member, i) => ({
-            image: `/images/avatars/${member.name || "rohan"}.jpg`,
+            image: `/images/avatars/${member.name.toLowerCase() || "rohan"}.jpg`,
             id: i + 1,
             designation: "",
             name: member.fullName,
@@ -80,11 +80,10 @@ export async function Members() {
             </h3>
             <div className="relative max-w-xl flex-1 overflow-hidden rounded-3xl rounded-bl-[30%] rounded-tr-[30%] border-x-4 border-teal-700">
               <Image
-                src={`/images/avatars/${member.name || "rohan"}.jpg`}
+                src={`/images/avatars/${member.name.toLowerCase() || "rohan"}.jpg`}
                 fill
                 className="object-cover"
                 alt={""}
-                unoptimized
               />
             </div>
           </div>
