@@ -39,7 +39,7 @@ export function AnimatedBeamDemo() {
 
   return (
     <div
-      className="relative flex w-full items-center justify-center overflow-hidden rounded-lg p-10"
+      className="relative flex w-full items-center justify-center overflow-hidden rounded-lg p-12"
       ref={containerRef}
     >
       <div className="flex size-full max-h-[200px] max-w-lg flex-col items-stretch justify-between gap-10">
@@ -64,7 +64,7 @@ export function AnimatedBeamDemo() {
                   alt="@rcsen"
                   className="object-cover"
                 />
-                <AvatarFallback>RCS</AvatarFallback>
+                <AvatarFallback>TD</AvatarFallback>
               </Avatar>
             </Link>
           </Circle>
@@ -82,9 +82,14 @@ export function AnimatedBeamDemo() {
               </Avatar>
             </Link>
           </Circle>
-          <Circle ref={div4Ref} className="size-16">
-            <span className="text-2xl">CC</span>
-          </Circle>
+          <div className="aura relative rounded-full border-2 border-primary/50">
+            <Circle
+              ref={div4Ref}
+              className="relative z-10 size-16 bg-secondary"
+            >
+              <span className="text-2xl">CC</span>
+            </Circle>
+          </div>
           <Circle ref={div6Ref}>
             <Link href={"/#om"}>
               <Avatar className="size-12 border-2 border-green-800">

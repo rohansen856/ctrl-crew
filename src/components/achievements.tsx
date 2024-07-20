@@ -25,7 +25,7 @@ export function Achievements() {
             title={item.title}
             description={item.description}
             header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
+            className={cn("[&>p:text-lg] lg:hover:scale-125", item.className)}
             icon={item.icon}
           />
         ))}
@@ -34,7 +34,7 @@ export function Achievements() {
   )
 }
 const Skeleton = () => (
-  <div className="dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex size-full min-h-24 flex-1   rounded-xl border border-transparent  bg-neutral-100 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black"></div>
+  <div className="dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex size-full min-h-24 flex-1 rounded-xl border border-transparent  bg-neutral-100 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] dark:border-white/[0.2] dark:bg-black"></div>
 )
 
 const SkeletonOne = () => {

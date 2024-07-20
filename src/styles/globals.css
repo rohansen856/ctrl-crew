@@ -79,3 +79,16 @@
   writing-mode: vertical-rl;
   text-orientation: upright;
 }
+
+.aura::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background-size: 10%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(20px);
+  z-index: 1;
+  background: linear-gradient(45deg, #1f51ff, #228b22);
+}

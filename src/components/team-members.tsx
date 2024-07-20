@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 import { members } from "@/config/team"
 import { cn } from "@/lib/utils"
@@ -61,23 +62,40 @@ export async function Members() {
         </div>
       </div>
       {members.map((member, i) => (
-        <div
+        <motion.div
           key={member.name}
           id={member.name.toLowerCase()}
           className={cn(
-            "mb-12 flex w-full flex-col gap-8 pt-4 lg:h-[90vh]",
+            "mb-12 flex w-full flex-col gap-8 pt-4 lg:h-[95vh]",
             i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
           )}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            bounce: 0.5,
+            delay: 0.5,
+          }}
         >
           <div
             className={cn(
-              "flex max-w-2xl flex-1 bg-gradient-to-b from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-clip-text",
+              "flex max-w-2xl flex-1 overflow-hidden",
               i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             )}
           >
-            <h3 className="text-vertical h-[35vh] text-start font-heading text-3xl uppercase text-transparent lg:text-5xl 2xl:text-7xl">
-              {member.name}
-            </h3>
+            <motion.div
+              initial={{ opacity: 0, x: i % 2 === 0 ? 100 : -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 1,
+                duration: 0.5,
+              }}
+              className="bg-gradient-to-b from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-clip-text"
+            >
+              <h3 className="text-vertical h-[35vh] text-start font-heading text-3xl uppercase text-transparent lg:text-5xl 2xl:text-7xl">
+                {member.name}
+              </h3>
+            </motion.div>
+
             <div className="relative max-w-xl flex-1 overflow-hidden rounded-3xl rounded-bl-[30%] rounded-tr-[30%] border-x-4 border-teal-700">
               <Image
                 src={`/images/avatars/${member.name.toLowerCase() || "rohan"}.jpg`}
@@ -88,15 +106,21 @@ export async function Members() {
             </div>
           </div>
           <div className="flex h-full min-h-40 flex-1 flex-col">
-            <h3 className="mb-4 text-start font-heading text-3xl capitalize lg:text-5xl 2xl:text-7xl">
+            <motion.h3
+              className="h-18 mb-4 overflow-hidden text-start font-heading text-3xl capitalize lg:text-5xl 2xl:text-7xl"
+              whileHover={{ letterSpacing: "5px" }}
+              transition={{
+                duration: 0.5,
+              }}
+            >
               {member.fullName}
-            </h3>
+            </motion.h3>
             <span className="mb-8 flex max-w-xl flex-wrap gap-2">
               {member.domains.map((domain, i) => (
                 <Badge
                   key={domain}
                   className={cn(
-                    "pointer-events-none border border-primary text-primary hover:bg-secondary",
+                    "pointer-events-none border border-primary text-primary duration-300",
                     badgeColors[i % badgeColors.length]
                   )}
                 >
@@ -111,17 +135,17 @@ export async function Members() {
               href={member.portfolio}
               className={cn(
                 buttonVariants(),
-                "group mt-auto flex gap-4 text-xl"
+                "group mt-auto flex gap-2 text-xl"
               )}
             >
               Meet me
               <Icons.arrowRight
                 size={20}
-                className="duration-300 group-hover:translate-x-6"
+                className="opacity-0 duration-300 group-hover:translate-x-6 group-hover:opacity-100"
               />
             </Link>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   )

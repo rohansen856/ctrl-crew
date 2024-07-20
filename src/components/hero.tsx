@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
@@ -12,10 +13,29 @@ import { TypeWriter } from "./type-writer"
 
 export function Hero() {
   return (
-    <div className="relative flex size-full flex-col items-center justify-center overflow-hidden border bg-background md:shadow-xl">
-      <div className="absolute -left-56 -top-56 size-[50rem] rotate-45 rounded-[10%] border-2 border-primary/30 bg-cyan-600/30" />
-      <div className="absolute -bottom-56 -right-56 size-[50rem] rotate-45 rounded-[10%] border-2 border-primary/30 bg-teal-600/30" />
-
+    <div className="relative flex size-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
+      <div className="absolute -left-56 -top-56 size-[50rem] rotate-45 rounded-[10%] border-2 border-primary/30 bg-cyan-600/30">
+        <div className="relative hidden size-full lg:flex">
+          <Image
+            src={"/images/illustrations/man.png"}
+            height={500}
+            width={500}
+            alt=""
+            className="m-auto"
+          />
+        </div>
+      </div>
+      <div className="absolute -bottom-56 -right-56 size-[50rem] rotate-45 rounded-[10%] border-2 border-primary/30 bg-teal-600/30">
+        <div className="relative hidden size-full lg:flex">
+          <Image
+            src={"/images/illustrations/woman.png"}
+            height={500}
+            width={500}
+            alt=""
+            className="m-auto"
+          />
+        </div>
+      </div>
       <Link href={"/#members"} className="z-10 mb-6 cursor-pointer">
         <AnimatedGradientText>
           🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
@@ -39,6 +59,7 @@ export function Hero() {
         <AnimatedBeamDemo />
       </div>
       <RetroGrid />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/5 bg-gradient-to-t from-white dark:from-background"></div>
     </div>
   )
 }
