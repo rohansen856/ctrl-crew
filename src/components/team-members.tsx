@@ -84,6 +84,7 @@ export async function Members() {
                 fill
                 className="object-cover"
                 alt={""}
+                unoptimized
               />
             </div>
           </div>
