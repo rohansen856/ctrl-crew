@@ -4,12 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
-import { members } from "@/config/team"
 import { cn } from "@/lib/utils"
 import RetroGrid from "@/components/magicui/retro-grid"
 
 import { AnimatedBeamDemo } from "./animated-members"
-import { AnimatedTooltip } from "./avatar-stack"
 import AnimatedGradientText from "./magicui/animated-gradient-text"
 import { TypeWriter } from "./type-writer"
 

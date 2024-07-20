@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "ctrl-crew",
-      url: "https://ctrl-crew.com",
+      url: "https://ctrl-crew.vercel.app",
     },
   ],
   creator: "ctrl-crew",
