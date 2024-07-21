@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site"
 import { absoluteUrl, cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
+import { ScrollProgress } from "@/components/progress-bar"
 import { SiteFooter } from "@/components/shared/site-footer"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -92,6 +93,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
+          <ScrollProgress />
           <SiteFooter />
           <Analytics />
           <Toaster />

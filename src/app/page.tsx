@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { FloatingNav } from "@/components/shared/floating-nav"
 // import { StaggerCaution } from "@/components/stagger-caution"
 import { Members } from "@/components/team-members"
+import { TechUsed } from "@/components/tech-stack"
 
 export default async function Page() {
   return (
@@ -14,6 +15,9 @@ export default async function Page() {
       <FloatingNav />
       <section className="h-auto w-full py-12" id="members">
         <Members />
+      </section>
+      <section className="h-auto w-full py-12" id="tech">
+        <TechUsed />
       </section>
       <section className="h-auto w-full py-12" id="achievements">
         <Achievements />

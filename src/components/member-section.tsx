@@ -90,7 +90,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
             <Badge
               key={domain}
               className={cn(
-                "pointer-events-none border border-primary text-primary duration-300",
+                "pointer-events-none border border-primary text-primary",
                 badgeColors[i % badgeColors.length]
               )}
             >

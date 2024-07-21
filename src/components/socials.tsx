@@ -14,7 +14,7 @@ export function Socials({ socials, ...props }: SocialsProps) {
       {socials.map((social) => (
         <Link
           href={social.link}
-          className="rounded-full bg-white p-0.5 duration-300 hover:-translate-y-2 hover:scale-110"
+          className="rounded-full p-0.5 duration-300 hover:-translate-y-2 hover:scale-110"
         >
           <Image
             src={`/images/social/${social.media}.png`}
