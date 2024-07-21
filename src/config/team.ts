@@ -1,4 +1,17 @@
-export const members = [
+export type MembersProps = {
+  id: string
+  name: string
+  fullName: string
+  mainSkill: string
+  domains: string[]
+  portfolio: string
+  socials: {
+    media: "instagram" | "twitter" | "github" | "whatsapp" | "linkedin"
+    link: string
+  }[]
+}[]
+
+export const members: MembersProps = [
   {
     id: "rohan",
     name: "Rohan",
@@ -13,7 +26,29 @@ export const members = [
       "3d-designer",
       "UX dveloper",
     ],
-    portfolio: "/",
+    portfolio: "https://rcsen.vercel.app",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
   },
   {
     id: "ritankar",
@@ -28,6 +63,28 @@ export const members = [
       "golang enthusiast",
     ],
     portfolio: "/",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
   },
   {
     id: "om",
@@ -42,6 +99,28 @@ export const members = [
       "rust enthusiast",
     ],
     portfolio: "/",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
   },
   {
     id: "aryan",
@@ -56,6 +135,28 @@ export const members = [
       "rust enthusiast",
     ],
     portfolio: "/",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
   },
   {
     id: "tanmay",
@@ -70,7 +171,27 @@ export const members = [
       "rust enthusiast",
     ],
     portfolio: "/",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
   },
 ]
-
-export type Members = typeof members

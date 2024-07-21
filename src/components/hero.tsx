@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
@@ -11,7 +9,7 @@ import { AnimatedBeamDemo } from "./animated-members"
 import AnimatedGradientText from "./magicui/animated-gradient-text"
 import { TypeWriter } from "./type-writer"
 
-export function Hero() {
+export async function Hero() {
   return (
     <div className="relative flex size-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
       <div className="absolute -left-56 -top-56 size-[50rem] rotate-45 rounded-[10%] border-2 border-primary/30 bg-cyan-600/30">

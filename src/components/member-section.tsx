@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
-import { type Members } from "@/config/team"
+import { type MembersProps } from "@/config/team"
 import { cn } from "@/lib/utils"
 
 import { Icons } from "./icons"
@@ -15,7 +15,7 @@ import { buttonVariants } from "./ui/button"
 
 interface MemberSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   index: number
-  member: Members[number]
+  member: MembersProps[number]
 }
 
 const badgeColors = [
@@ -67,12 +67,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
       <div className="flex h-full min-h-40 flex-1 flex-col">
         <h3 className="h-18 mb-4 flex overflow-visible text-start font-heading text-3xl capitalize lg:text-5xl 2xl:text-7xl">
           {member.fullName.split(" ").map((w, i) => (
-            <motion.span
-              whileHover={{ y: -20, scale: 0.9 }}
-              transition={{ duration: 0.2 }}
-              key={w}
-              className="mr-4"
-            >
+            <span key={w} className="mr-4">
               {w.split("").map((l, j) => (
                 <motion.span
                   initial={{ y: 100, opacity: 0 }}
@@ -87,7 +82,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
                   {l}
                 </motion.span>
               ))}
-            </motion.span>
+            </span>
           ))}
         </h3>
         <span className="mb-8 flex max-w-xl flex-wrap gap-2">
@@ -104,30 +99,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
           ))}
         </span>
         <div className="mb-8 flex">
-          <Socials
-            socials={[
-              {
-                media: "linkedin",
-                link: "",
-              },
-              {
-                media: "github",
-                link: "",
-              },
-              {
-                media: "twitter",
-                link: "",
-              },
-              {
-                media: "whatsapp",
-                link: "",
-              },
-              {
-                media: "instagram",
-                link: "",
-              },
-            ]}
-          />
+          <Socials socials={member.socials} />
         </div>
         <div className="relative max-w-3xl">
           <MarqueeDemo />
