@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { cn } from "@/lib/utils"
 import Marquee from "@/components/magicui/marquee"
 

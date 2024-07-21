@@ -72,3 +72,5 @@ export const members = [
     portfolio: "/",
   },
 ]
+
+export type Members = typeof members
