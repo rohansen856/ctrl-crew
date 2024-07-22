@@ -1,14 +1,12 @@
 import { Achievements } from "@/components/achievements"
 import { Hero } from "@/components/hero"
 import { FloatingNav } from "@/components/shared/floating-nav"
-// import { StaggerCaution } from "@/components/stagger-caution"
 import { Members } from "@/components/team-members"
 import { TechUsed } from "@/components/tech-stack"
 
-export default async function Page() {
+export default function Page() {
   return (
     <main className="relative">
-      {/* <StaggerCaution /> */}
       <section id="home" className="relative h-screen w-full overflow-hidden">
         <Hero />
       </section>

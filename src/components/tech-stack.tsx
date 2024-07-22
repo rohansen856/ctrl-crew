@@ -27,7 +27,7 @@ export function TechUsed() {
       </h2>
       <div className="flex w-full max-w-3xl flex-wrap items-center justify-center gap-12 py-12">
         {stacks.map((item) => (
-          <Magnetic>
+          <Magnetic key={item}>
             <motion.span
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}

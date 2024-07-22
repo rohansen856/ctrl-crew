@@ -73,6 +73,9 @@
       url("/images/cursor.svg") 0 0,
       auto;
   }
+  *::-webkit-scrollbar {
+    display: none;
+  }
   body {
     @apply bg-background text-foreground;
   }

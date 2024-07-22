@@ -70,6 +70,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
             <span key={w} className="mr-4">
               {w.split("").map((l, j) => (
                 <motion.span
+                  key={i * 10 + j}
                   initial={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{

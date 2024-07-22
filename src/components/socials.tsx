@@ -13,6 +13,7 @@ export function Socials({ socials, ...props }: SocialsProps) {
     <div className="relative flex w-full justify-center gap-4 lg:justify-start">
       {socials.map((social) => (
         <Link
+          key={social.media}
           href={social.link}
           className="rounded-full p-0.5 duration-300 hover:-translate-y-2 hover:scale-110"
         >
