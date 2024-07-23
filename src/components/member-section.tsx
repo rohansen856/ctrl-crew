@@ -78,6 +78,7 @@ export function MemberSection({ index, member, ...props }: MemberSectionProps) {
                     duration: 0.15,
                     delay: (i * 10 + j) * 0.1,
                   }}
+                  viewport={{ once: true }}
                   className="inline-block"
                 >
                   {l}

@@ -21,7 +21,10 @@ export function TechUsed() {
     "typescript",
   ]
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="relative flex w-full flex-col items-center justify-center">
+      <div className="absolute inset-0 -mt-4 size-full px-4 lg:px-12">
+        <div className="bg-grains-ellipse size-full overflow-hidden border border-primary/30 bg-cover bg-center bg-no-repeat opacity-10 dark:opacity-30"></div>
+      </div>
       <h2 className="mb-8 text-center font-heading text-xl lg:text-3xl 2xl:text-5xl">
         Our Tools
       </h2>
@@ -35,7 +38,7 @@ export function TechUsed() {
                 duration: 0.01,
                 delay: 0.5,
               }}
-              className="flex h-24 w-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border-2 p-2 duration-300 hover:bg-secondary"
+              className="flex h-24 w-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border-2 border-primary/50 p-2 duration-300 hover:bg-secondary"
             >
               <Image
                 src={`/images/tech/${item}.svg`}

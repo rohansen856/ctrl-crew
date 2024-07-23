@@ -98,3 +98,20 @@
   z-index: 1;
   background: linear-gradient(45deg, #1f51ff, #228b22);
 }
+
+.bg-grains-ellipse {
+  background-image: url("/images/grains_ellipse.png");
+}
+
+.background_gradient {
+  transform-style: preserve-3d;
+  background-image: radial-gradient(
+    circle closest-side,
+    rgba(179, 40, 88, 0.3),
+    rgba(179, 40, 88, 0)
+  );
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  transform: rotate(12deg) scale3d(3, 1.5, 1);
+}

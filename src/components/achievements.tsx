@@ -11,10 +11,13 @@ import { BentoGrid, BentoGridItem } from "@/components/magicui/bento-grid"
 export function Achievements() {
   return (
     <section
-      className="relative mb-16 mt-6 w-full"
+      className="relative mb-16 mt-6 w-full overflow-x-hidden lg:overflow-visible"
       about="projects"
       id="projects"
     >
+      <div className="absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2">
+        <div className="background_gradient"></div>
+      </div>
       <h2 className="mb-8 text-center font-heading text-xl lg:text-3xl 2xl:text-5xl">
         Achievements
       </h2>
