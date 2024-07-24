@@ -74,6 +74,7 @@
     "react-icon-cloud": "^4.1.4",
     "react-resizable-panels": "^2.0.13",
     "react-textarea-autosize": "^8.5.3",
+    "recharts": "^2.12.7",
     "sharp": "^0.33.2",
     "shiki": "^1.2.0",
     "sonner": "^1.4.3",

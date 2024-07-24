@@ -9,6 +9,10 @@ export type MembersProps = {
     media: "instagram" | "twitter" | "github" | "whatsapp" | "linkedin"
     link: string
   }[]
+  strongholds: {
+    domain: "Backend" | "Frontend" | "Blockchain" | "AI/ML" | "Cloud"
+    stats: number
+  }[]
 }[]
 
 export const members: MembersProps = [
@@ -49,6 +53,13 @@ export const members: MembersProps = [
         link: "tel:+916290597853",
       },
     ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
+    ],
   },
   {
     id: "ritankar",
@@ -84,6 +95,13 @@ export const members: MembersProps = [
         media: "whatsapp",
         link: "tel:+916290597853",
       },
+    ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
     ],
   },
   {
@@ -121,6 +139,13 @@ export const members: MembersProps = [
         link: "tel:+916290597853",
       },
     ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
+    ],
   },
   {
     id: "aryan",
@@ -157,12 +182,19 @@ export const members: MembersProps = [
         link: "tel:+916290597853",
       },
     ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
+    ],
   },
   {
     id: "tanmay",
     name: "Tanmay",
     fullName: "Tanmay Deobhankar",
-    mainSkill: "frontend dev",
+    mainSkill: "frontend-dev",
     domains: [
       "web dev",
       "frontend developer",
@@ -192,6 +224,56 @@ export const members: MembersProps = [
         media: "whatsapp",
         link: "tel:+916290597853",
       },
+    ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
+    ],
+  },
+  {
+    id: "mariam",
+    name: "Mariam",
+    fullName: "Mariam Eqbal",
+    mainSkill: "backend-dev",
+    domains: [
+      "web dev",
+      "python developer",
+      "backend engineer",
+      "SQL developer",
+      "haskell",
+    ],
+    portfolio: "/",
+    socials: [
+      {
+        media: "linkedin",
+        link: "https://www.linkedin.com/in/rohan856/",
+      },
+      {
+        media: "github",
+        link: "https://github.com/rohansen856/",
+      },
+      {
+        media: "twitter",
+        link: "https://x.com/rohansen856",
+      },
+      {
+        media: "instagram",
+        link: "https://www.instagram.com/rcsen856",
+      },
+      {
+        media: "whatsapp",
+        link: "tel:+916290597853",
+      },
+    ],
+    strongholds: [
+      { domain: "Backend", stats: 25 },
+      { domain: "Frontend", stats: 25 },
+      { domain: "Blockchain", stats: 30 },
+      { domain: "AI/ML", stats: 10 },
+      { domain: "Cloud", stats: 10 },
     ],
   },
 ]

@@ -117,14 +117,14 @@ export function AnimatedBeamDemo() {
             </Link>
           </Circle>
           <Circle ref={div7Ref}>
-            <Link href={"/#rohan"}>
+            <Link href={"/#mariam"}>
               <Avatar className="size-12 border-2 border-green-800">
                 <AvatarImage
-                  src="/images/avatars/rohan.jpg"
+                  src="/images/avatars/mariam.jpg"
                   alt="@rcsen"
                   className="object-cover"
                 />
-                <AvatarFallback>RCS</AvatarFallback>
+                <AvatarFallback>ME</AvatarFallback>
               </Avatar>
             </Link>
           </Circle>

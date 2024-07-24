@@ -46,6 +46,7 @@ export const BentoGridItem = ({
         delay: 0.5,
         duration: 1,
       }}
+      viewport={{ once: true }}
     >
       {header}
       <div className="transition duration-200 group-hover/bento:translate-x-2">
