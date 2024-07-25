@@ -8,12 +8,6 @@ const withMDX = mdx()
 const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-  images: {
-    domains: ["avatars.githubusercontent.com"],
-  },
-  experimental: {
-    serverComponentsExternalPackages: ["@prisma/client"],
-  },
 }
 
 export default withMDX(nextConfig)
